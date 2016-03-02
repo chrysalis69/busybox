@@ -8,9 +8,9 @@ Other images will be based on this image.
 ## Getting Started
 
 ```
-docker build -t chrysalis:busybox-builder --pull -f Dockerfile.builder busybox
+docker build -t chrysalis:busybox-builder builder
 docker run --rm chrysalis:busybox-builder tar cC rootfs . | xz -z9 > "busybox.tar.xz"
-docker build -t chrysalis:busybox busybox
+docker build -t chrysalis:busybox .
 ```
 
 Building this image is a multistep process.

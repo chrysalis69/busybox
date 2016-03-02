@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
 		make \
 	&& rm -rf /var/lib/apt/lists/*
 
+RUN gpg --keyserver pool.sks-keyservers.net --recv-keys C9E9416F76E610DBD09D040F47B70C55ACC9965B
 
 ENV BUSYBOX_VERSION 1.24.1
 
